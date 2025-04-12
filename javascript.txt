@@ -1,0 +1,97 @@
+*coersion in javascript is implicit conversion of a value one data type to another
+
+there are two main types datatypes =>
+	1. Primitive datatypes-
+		in primitive datatypes include various datatypes like
+		a) Number : number contains both integer and float datatypes where in float store 		decimal numbers and integers stores hole numbers .
+
+		b)String : It stores collections of characters.
+
+		c)Boolean : It contains true and false values.
+
+		d)null : it contains null values.
+
+		c)Undefined : it is undefined .
+	
+	2. Non-primitive:
+		in nonprimi datatypes include various datatypes like
+		a)Array: 
+		b)Object:
+
+
+
+concatination => it is use to connect the two or more string we have three ways to concat of strings.
+	1) using + - eg like let fullname = "first-name" + "last-name"
+	2) using .conact - eg let fullname = first-name.concat(last-name)
+	3)using $ - eg let fullname = `${first-name} ${last-name}`
+
+	.toUpperCase and .toLowerCase
+
+	.length properties used to find the length of string including voidSpaces, if i want to ignore 	void spaces in string then we use .trim() function
+
+	and if you want to find character using index then we will use (varNmae[index]).
+
+	if we want to check String present or not we use .include('String_name') for finding any string 	in the para it give boolean values.
+
+ 	if we want to find index of some particular string then we use .indexOf('String_name'), 	.lastIndexOf('String_name'), .startWith('String_name'), endsWith('String_name'), charAt(index),
+	.search(/String_name/), when i use search(/String_name/i) it not check for casesensitive, 
+	.replace('string1','string2') 
+
+*Array : array is a non primitive data type where we can store element which has different data type
+and also it is order collections of diff data type element.
+
+if i want length of array we use fun. like  array.length
+
+if we want to create array from any variable then we will use array.split()
+
+when there is empty array we use fill function to fill the value in array
+like array = Array(3).fill('ABC').
+
+concat method is use to combine the two arrays
+like num1 = [1,2,3,4,5]
+     num2 = [10,11,12]  ==> console.log(num1.concat(num2))
+
+
+when we use pop then it will remove last element of the  array.
+
+**Objects : Object it is the non primitive data types. it is used to store collections of key-value pairs.
+
+	*Prototype: Every javascript has a buitl-in property called "Prototype" It allow objects to inherit properties and method from another object.
+	*prototype chain : If a property or method not found on an object, javascript loooks up the prototype chain to find it. "Call, Bind & Apply" these are the methods that all functions inherits from function.prototype. They allow you to controll the value of inside the function
+
+
+**JSON : (javascript object notation) If you want to transfer the data from backend to frontend we use JSON and read and write the data and it is language independent and it can be used with many programming languages like pyhton, java, golang, c++.
+It uses key value pair like javasvript object.
+JSON includes two main methods : 1) JSON.Stringify() - Its converts the Javascript object into JSON String.
+				 2) JSON.parse() - Its convert the Json String to javascript object. 
+
+**Destructuring in JS : It is also known as Unpacking of the element which is present in array / object.
+ you can extract value from the array and assing them to the variable using square brackets [].
+	1. Rest-Operator : rest-operator used to collect multiple elements into the array/object.
+	2. Sprade-Operator : using sprade operator we will concat the two arrays.
+
+**RejEx : (Regular expression) 
+
+
+**Classes : classes is the bluePrint of the object and classes are a templates for creating objects.
+	they allow you to define and create objects in a more structured and object-oriented way.
+	you can define the class using "class" keyward.
+	
+	*Methods - Functions defined inside the class.
+	*Inheritance - Javascript classes supports inheritance, in this one class inherits properties and method from another. Using `Extend` keyword we will create the subclass. 
+for accessing the methods from parents class we will use `super` keyword.
+	*constructor - It is also method for initializing and creating objects within the class. construtor is automatically called when we create the object.
+	*Static method - it will be called without creating an object, method that belongs to the class itself.
+	*Getters and Setters - we can define the getter and setter methods inside the class to get and set the properties.
+
+
+**DOM : In DOM (Document object model) we can access any HTML element using javascript and when web page loaded, the browser will create DOM of the page 
+	methods of DOM manupilations:
+		1) Selecting with ID - documnet.getElementByID("myid")
+		2) Selecting with class - documnet.getElementByClass("myclass")
+		3) Selecting with Tag - documnet.getElementByTagName("div")
+		4) Query Selector - documnet.querySelector("myid/myclass/div"):It returns first element
+		5) Query SelectorAll - document.QuerySelectorAll("myid/myclass/div"):It return node list
+
+
+**Promises : method promise.any() it return the promise value any one promise is resolved and it give aggrigate error when all promises are rejected.	 

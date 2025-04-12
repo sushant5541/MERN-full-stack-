@@ -1,0 +1,70 @@
+1. we use map tag for identify the image :
+	
+//	<map name="image-map">
+		<area shape="rect" coords="x1, y1, x2, y2" href="phone.html" alt="page 2"		
+	</map>
+
+	<img src="images.jpeg"
+		usemap="#image-map" alt="image map example">
+
+2. Categorizing Tags :
+
+	*void => <img/>, <br/>, <input/>, <link/>, <meta/>
+	*Sementic => <header>, <navigation>, <main>, <section>, <artical>, <aside>, <footer>, <figure>, 	<figcaption>
+	*block level-Elements => <div>, <p>, <h1>-<h6>, <header>, <navigation>, <main>, <section>, 	<artical>, <aside>, <ul>, <ol>, <li>, <blockquote>, <pre>
+	*Inline level-Elements => <span>, <a>, <img>, <strong>, <em>, <abbr>, <cite>, <code>, <time>, 		<br>, <input>, <select>, <textarea>, <button>, <label>
+
+	"Block level element is always print the data in next line && Inline level elements is always 		print the data in one line."
+
+
+CSS:
+
+1. positions :
+ there are five types of positions
+	a. Static Position : Static position it is default position, and its ignore properties like top, 		bottom, left, right.
+	b. Relative Position : In this position we have to apply properties like top, bottom, left, 		right. It is relative the normal position
+	c. Absolute position : in this position the element can be fixed into their parent element but 		parent element must have relative postion.
+	d.Fixed Postion : When we use fixed postion then the element is fixed thier postion even if the 		page is scrolled.
+	e. Sticky position : it is hybrid of fixed and relative .when an element is set to sticy it 		behaves like relatively positioned, until it reches a specified scroll down, then it 		becomes fixed
+	 z index : when two elements are overlaped each other and we have to display overlapped element on the top then we have to use z-index.
+
+
+2. Combinators:
+ 	descendant combinator (" "): it selects all the elements that are descendant of specified element.
+	eg. : li li {
+ 		 
+	Child combinator(>) : it selects all elements that are direct childern of speccific element.
+	eg.: there is one division in that division present two span when we use child selector for 		style it will act on first span beacause it is direct childern of div
+ 
+	Adjacent sibling combinator(+) :  It selects an element that is immediatly preceded by a sibling
+	element
+	eg.: like there is one divion in that div present two element like h1 and p   when we do styling for p it h1 + p there p is comes immediatly after h1 with in same parent.
+
+	General Sibling combinator (~ Tild symbol): It select all siblings element that follow specified 	element, eg h1 ~ p this target all <p> that are sibling of an <h1> whether they are adjacent  or not
+
+3. Attribute combinator : when we want do styling using attribute then we use attribute selector 
+	eg.: there is anchor tag which is in present target atrribute if we want to style that atrribute 	we use attribute in square breces and give style 
+	and when we use attribute like href and we want do some styling start from we use (^ cap symbol)
+	and from end we use ($ dollar symbol).
+	and we (*symbol) for any atrribute values.
+
+
+4. Pseudo classes : these target elements based on their state or position i document structure and it is written with (:colon) in stylesheet eg. : we have anchor tag and we want to styale that like color should change when we use pseudo class like a:hover and button:active and input:focus(when user clicks into a text input then it will show bosrder around it), disabled, checked 
+
+	and there is nasted element and we want to do style for perticular element also we use pseudo classes eg like we have four paragraph in one division and we should to style for first paragraph we will use p:first-child also we use for nth child.
+
+5. Pseudo element : pseudo element is used to styling for specific part of the element and it is declared with (::) in style tag eg. like we have to do style for first line then se use p ::first-line, also we use before, after, first letter.
+
+
+Margin : margin is the space which is outside of the border of the element  there is various properties in margin like margin top, mb
+
+padding : padding is the space between content of the element and border it providing space between contenet and border
+
+
+border : is drawn inside an elements box
+
+outline : is drawn outside of elements border
+
+
+  
+ 	

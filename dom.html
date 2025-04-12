@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        div {
+            background-color: aquamarine;
+            border: 1px solid black;
+            height: 100px;
+            width: 100%;
+            margin: auto 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="CreateDiv()"
+        style="background-color: blue; color:white; border: 1px solid white; border-radius:5px; margin-bottom: 5px; cursor: pointer;">Click
+        Me</button>
+    <!-- <div id="first_div" class="first">
+    
+ </div> 
+
+ <div id="second_div" class="second">
+    
+ </div> -->
+    <div id="root">
+        <!-- <h2> Testing Remove function <small onclick="Remove()" style="padding-left:30px; cursor: pointer;">Remove</small></h2> -->
+    </div>
+
+
+    <script>
+
+        // let CreateDiv = () => {
+
+        //     let heading = document.createElement('h1');
+        //     heading.innerHTML = "Testing Dom!!"
+        //     heading.style.textAlign = "center"
+
+        //     document.querySelector('#root').appendChild(heading)
+        // }
+
+         let CreateDiv = () => {
+
+            let heading = document.createElement('h1');
+            heading.innerHTML = "Testing Dom!!"
+            heading.style.textAlign = "center"
+            heading.setAttribute('id', "h1_tag");
+            heading.setAttribute('class', "title");
+            heading.classList.add("hello");
+
+            document.querySelector('#root').appendChild(heading)
+        }
+
+
+        // let Remove = () => {
+
+        //     let child = document.querySelector('h2')
+
+        //     document.querySelector('#root').removeChild(child)
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

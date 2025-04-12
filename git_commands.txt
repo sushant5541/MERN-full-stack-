@@ -1,0 +1,13 @@
+echo "# NEW" >> README.md
+
+git clone https:// "Token"@github.com/sushant5541/UserManagementExpress.git
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sushant5541/NEW.git
+git push -u origin main
+
+
+
+// if i want to save modifieded files which is already in the working directory then i except the sencond last command

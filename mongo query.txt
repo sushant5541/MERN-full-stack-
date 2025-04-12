@@ -1,0 +1,30 @@
+/mongosh
+/show dbs
+/use "dbname"
+/show collections
+/db.studentt.insertOne({"name":" ", "class": ""})
+/db.student.insertMany([{"name":" ", "class":" " }, {"name" : " ", "class" : " " }])
+/db.student.find({})
+/db.student.find({name:" "})
+/db.student.find({}).limit(10)
+/db.cities.find({$and:[{"country_name" : " "}, {"state" : " "}]})
+/db.cities.find({latitude:{$gte:"40"}})           // For greater Than
+/db.cities.find({latitude:{$lte:"40"}})           // for less Than
+/db.cities.find({latitude:{$gte:"40", $lte:"42"}})
+/db.cities.find({ name:/^Ind/})                 //find vlaue from start
+/db.cities.find({ name:/ia$/})                   //find value from last 
+/db.student.find({}).limit(10).sort({name:1})   // for sorting
+/db.student.find({}).limit(10).sort({name:1}).skip(4)     // for skipping the data
+/db.players.updateOne({"email" : "rohitsharma@gmail.com", {$set:{"phone" : "76237846"}}}, {upsert:true})
+/db.players.deleteOne({"email":"sharukhkhan@gmail.com"})
+/db.players.aggregate({$match : {"lastName" : "kohli"}})
+/db.players.aggregate([{$group: {_id:"$city", total_players: {$sum:1}}}])
+/db.players.aggregate([{$group: {_id:"$address.city", total_players: {$sum:1}}}])
+
+/db.players.aggregate([{$sort: {lastName:1}}])
+
+/db.players.aggregate([{ $lookup: {form:"playerStates", localField:"id", foreignField:"playerId", as:"statistics"}}])
+
+/db.players.aggregate([{$project: {firstName:1, latName:1, email:1, _id:0}}])
+
+/db.players.aggregate([{$project: { fullname: { $concat: ["firstName", " ", "LastName"]}, email:1, id:0}}])
